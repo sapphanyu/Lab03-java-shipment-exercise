@@ -1,3 +1,4 @@
+package com.example;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,7 +74,7 @@ class Shipment {
     //             แนะนำ: ใช้ String.format() และเรียก calculateCost()
     @Override
     public String toString() {
-        return "[" + trackingNumber + "] " + weightKg + " กก. | " + type + " | " + calculateCost();  // ← เติมให้ครบ
+        return "[" + trackingNumber + "] " + weightKg + " กก. | " + type + " | " + calculateCost() + " บาท";  // ← เติมให้ครบ
     }
 }
 
@@ -120,7 +121,7 @@ class ShippingCompany {
         System.out.println("========================================");
 
         // 1) วนลูปแสดงแต่ละ shipment ตรงนี้
-        for(shipment s : shipments){
+        for(Shipment s : shipments){
             System.out.println(s);
         }
 
